@@ -1,0 +1,5 @@
+<ui5-table-header-row slot="headerRow">
+  <ui5-table-header-cell *ngFor="let header of headers" [width]="header.width">
+    <span>{{ header.label }}</span>
+  </ui5-table-header-cell>
+</ui5-table-header-row>
