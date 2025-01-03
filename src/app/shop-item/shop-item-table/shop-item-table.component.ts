@@ -4,14 +4,13 @@ import '@ui5/webcomponents/dist/Table';
 import '@ui5/webcomponents/dist/TableCell';
 import "@ui5/webcomponents/dist/TableHeaderRow";
 import '@ui5/webcomponents/dist/TableRow';
-import { ShopItemRowComponent } from './components/shop-item-row/shop-item-row.component';
-import { Header } from './types/header.type'; // Import the Header type
-import { RowData } from './types/row-data.type'; // Import the RowData type
+import { Header } from './types/header.type';
+import { RowData } from './types/row-data.type';
 
 
 @Component({
   selector: 'shop-item-table',
-  imports: [ShopItemRowComponent, CommonModule],
+  imports: [CommonModule],
   templateUrl: './shop-item-table.component.html',
   styleUrl: './shop-item-table.component.scss',
   standalone: true,

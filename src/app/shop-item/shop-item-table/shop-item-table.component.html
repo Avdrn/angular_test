@@ -1,4 +1,12 @@
 <ui5-table id="table">
-  <app-header [headers]="headers"></app-header>
-  <shop-item-row *ngFor="let row of rows" [rowData]="row"></shop-item-row>
+<ui5-table-header-row slot="headerRow">
+  <ui5-table-header-cell  *ngFor="let header of headers" [width]="header.width" id="header.label">
+    <span>{{ header.label }}</span>
+  </ui5-table-header-cell>
+</ui5-table-header-row>
+<ui5-table-row *ngFor="let row of rows" [row-key]="row.key" [interactive]="row.interactive">
+  <ui5-table-cell *ngFor="let cell of row.cells">
+    <ui5-label [style.color]="cell.color"><b>{{ cell.value }}</b> {{ cell.unit }}</ui5-label>
+  </ui5-table-cell>
+</ui5-table-row>
 </ui5-table>
