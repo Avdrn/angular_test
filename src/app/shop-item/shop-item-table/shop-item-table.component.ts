@@ -4,7 +4,6 @@ import '@ui5/webcomponents/dist/Table';
 import '@ui5/webcomponents/dist/TableCell';
 import "@ui5/webcomponents/dist/TableHeaderRow";
 import '@ui5/webcomponents/dist/TableRow';
-import { HeaderComponent } from './components/header/header.component';
 import { ShopItemRowComponent } from './components/shop-item-row/shop-item-row.component';
 import { Header } from './types/header.type'; // Import the Header type
 import { RowData } from './types/row-data.type'; // Import the RowData type
@@ -12,7 +11,7 @@ import { RowData } from './types/row-data.type'; // Import the RowData type
 
 @Component({
   selector: 'shop-item-table',
-  imports: [HeaderComponent, ShopItemRowComponent, CommonModule],
+  imports: [ShopItemRowComponent, CommonModule],
   templateUrl: './shop-item-table.component.html',
   styleUrl: './shop-item-table.component.scss',
   standalone: true,
@@ -42,7 +41,7 @@ export class ShopItemTableComponent {
     },
     {
       key: 'b',
-      interactive: false,
+      interactive: true,
       cells: [
         { value: 'Notebook Basic 17', unit: 'HT-1001', color: '' },
         { value: 'Smartcards', unit: '', color: '' },
