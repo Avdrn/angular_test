@@ -3,11 +3,11 @@ import { SecondComponent } from './second/second.component';
 
 export const appRoutes: Routes = [
   {
-    path: 'shop-items',
+    path: 'shop-item',
     loadChildren: () =>
       import('./shop-item/shop-item.module').then((m) => m.ShopItemModule),
   },
   { path: 'second-component', component: SecondComponent },
-  { path: '', redirectTo: 'shop-items', pathMatch: 'full' },
+  { path: '', redirectTo: 'shop-item', pathMatch: 'full' },
   { path: '**', redirectTo: '' },
 ];
