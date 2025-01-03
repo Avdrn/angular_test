@@ -1,0 +1,25 @@
+{
+  "singleQuote": true,
+  "trailingComma": "none",
+  "arrowParens": "avoid",
+  "printWidth": 80,
+  "overrides": [
+    {
+      "files": "*.component.html",
+      "options": {
+        "parser": "angular",
+        "bracketSameLine": true,
+        "singleAttributePerLine": true
+      }
+    }
+  ],
+  "plugins": ["prettier-plugin-organize-attributes"],
+  "attributeGroups": [
+    "$DEFAULT",
+    "$ANGULAR_INPUT",
+    "$ANGULAR_OUTPUT",
+    "$ANGULAR_TWO_WAY_BINDING",
+    "$ANGULAR_STRUCTURAL_DIRECTIVE"
+  ],
+  "attributeSort": "ASC"
+}
