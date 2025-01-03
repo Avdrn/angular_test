@@ -4,5 +4,6 @@ import { Component } from '@angular/core';
   selector: 'shop-item-filters',
   templateUrl: './shop-item-filters.component.html',
   styleUrls: ['./shop-item-filters.component.scss'],
+  standalone: true,
 })
-export class ShopItemFiltersComponent {}
+export class ShopItemFiltersComponent { }
