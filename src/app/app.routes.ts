@@ -1,11 +1,13 @@
 import { Routes } from '@angular/router';
-import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
-import { ShopItemComponent } from './shop-item/shop-item.component';
 
-export const routes: Routes = [
-  { path: 'shop-item', component: ShopItemComponent },
+export const appRoutes: Routes = [
+  {
+    path: 'shop-items',
+    loadChildren: () =>
+      import('./shop-item/shop-item.module').then((m) => m.ShopItemModule),
+  },
   { path: 'second-component', component: SecondComponent },
-  { path: '', redirectTo: '/shop-itemt', pathMatch: 'full' },
-  { path: '**', component: ShopItemComponent },
+  { path: '', redirectTo: 'shop-items', pathMatch: 'full' },
+  { path: '**', redirectTo: '' },
 ];
